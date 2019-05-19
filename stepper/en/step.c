@@ -52,7 +52,7 @@
 //  Turn it to 0 to use it in normal states.                                 //
 //                                                                           //
 //  The speed set use a simple delay_ms.                                     //
-//  As a recomendation, keep it between 10 and 100 ms.                       //
+//  As a recomendation, keep it between 2 and 10 ms.                         //
 //  But it depends on what motor driver you use.                             //
 //                                                                           //
 //  Now thats all, enjoy it, and if you find                                 //    
@@ -107,7 +107,7 @@ void init_stepper(){
    output_bit(stepper_pins[0], 1);
    output_bit(stepper_pins[1], 0);
    step=0;
-   speed = 10;
+   speed = 2;
    delay_ms(10);
 }
 
@@ -139,6 +139,6 @@ void move_stepper(int direction, int16 steps_count){
                step++;
             }
          }
-         delay_ms( 10+speed );
+         delay_ms( speed );
       }
 }

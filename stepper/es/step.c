@@ -52,7 +52,7 @@
 //  Si se quiere usar en forma normal ponerlo en cero.                       //
 //                                                                           //
 //  El seteo de velocidad usa solo un delay_ms.                              //
-//  Recomiendo mantenerlo entre 10 y 100 ms, pero                            //
+//  Recomiendo mantenerlo entre 2 y 10 ms, pero                              //
 //  Depende del driver que usen para el motor.                               //
 //                                                                           //
 //  Ahora si, eso es todo, disfutenlo, y si encuentran                       //    
@@ -107,7 +107,7 @@ void init_stepper(){
    output_bit(stepper_pins[0], 1);
    output_bit(stepper_pins[1], 0);
    step=0;
-   speed = 10;
+   speed = 2;
    delay_ms(10);
 }
 
@@ -139,6 +139,6 @@ void move_stepper(int direction, int16 steps_count){
                step++;
             }
          }
-         delay_ms( 10+speed );
+         delay_ms( speed );
       }
 }
