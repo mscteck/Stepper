@@ -113,7 +113,7 @@ void init_stepper(){
 
 void move_stepper(int direction, int16 steps_count){
       int index;
-      int counter1, counter2;
+      int16 counter1, counter2;
       for( counter1=1; counter1<=steps_count; counter1++ ){
          for(counter2=0;counter2<4;counter2++){
             if((mode==HALF_STEP)&&(direction==12)){
